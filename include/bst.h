@@ -5,7 +5,7 @@
 #include <vector>
 template <typename T>
 class BST {
-public:
+ public:
     struct Node {
         T value;
         int count;
@@ -16,7 +16,7 @@ public:
             : value(val), count(1), left(nullptr), right(nullptr) {}
     };
 
-private:
+ private:
     Node* root;
     Node* insertNode(Node* node, const T& value) {
         if (!node) return new Node(value);
@@ -58,7 +58,7 @@ private:
         collectNodes(node->left, vec);
     }
 
-public:
+ public:
     BST()  : root(nullptr) {}
     ~BST() { destroyTree(root); }
 
