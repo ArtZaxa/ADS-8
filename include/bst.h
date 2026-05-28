@@ -62,9 +62,6 @@ class BST {
     BST()  : root(nullptr) {}
     ~BST() { destroyTree(root); }
 
-    BST(const BST&)            = delete;
-    BST& operator=(const BST&) = delete;
-
     void insert(const T& value) {
         root = insertNode(root, value);
     }
