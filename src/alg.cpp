@@ -8,7 +8,7 @@
 #include  <vector>
 #include  <string>
 #include  <algorithm>
-void makeTree(BST<std::string>& tree, const char* filename){
+void makeTree(BST<std::string>& tree, const char* filename) {
     std::ifstream file(filename);
     std::string word;
     while (!file.eof()) {
@@ -32,7 +32,7 @@ void makeTree(BST<std::string>& tree, const char* filename){
     file.close();
 }
 
-void printFreq(BST<std::string>& tree){
+void printFreq(BST<std::string>& tree) {
     std::vector<BST<std::string>::Node*> nodes = tree.getAllNodesFreq();
 
     std::sort(nodes.begin(), nodes.end(),
